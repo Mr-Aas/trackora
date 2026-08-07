@@ -13,8 +13,8 @@ export default function Header() {
             year: 'numeric',
         })}
    return (
-            <div className='outer bg-gray-600 h-12 flex justify-center items-center absolute w-full top-0 pl-4 pr-4'>
-                <ul className='flex text-xl text-white w-full justify-between gap-4  '>
+            <div className='outer bg-gray-600 h-12 flex justify-center items-center w-full top-0 pl-4 pr-4'>
+                <ul className=' flex text-xl text-white w-full justify-between gap-4  '>
                     <Link to='/manageTasks' className='menu flex flex-col items-center ' >
                         <ClipboardPen />
                         <span className='text-sm'>Tasks</span>
