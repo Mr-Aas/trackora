@@ -1,5 +1,6 @@
 import React from 'react'
-import { BadgePlus } from 'lucide-react';
+import { BadgePlus, CircleCheckBig, Trash2, PencilSparkles, DeleteIcon } from 'lucide-react';
+
 import { useState, useEffect } from "react"
 
 
@@ -16,8 +17,8 @@ export default function Todos() {
     todo: "complete my life goals before die",
     priority: "high",
     isCompleted: false,
-    borderColor:"border-green-700",
-    bgColor:"bg-green-300"
+    borderColor: "border-green-700",
+    bgColor: "bg-green-300"
 
   }])
   const [selectedPriority, setselectedPriority] = useState("low")
@@ -30,10 +31,10 @@ export default function Todos() {
         if (s.priority == "high") {
           s.bgColor = "bg-red-200 ";
           s.borderColor = "border-red-700";
-        }else if (s.priority == "medium") {
+        } else if (s.priority == "medium") {
           s.bgColor = "bg-yellow-200";
           s.borderColor = "border-yellow-700";
-        }else {
+        } else {
           s.bgColor = "bg-green-300";
           s.borderColor = "border-green-700";
         }
@@ -83,10 +84,6 @@ export default function Todos() {
   }
   const handleAdd = () => {
 
-    console.log(formdata)
-    console.log(todos)
-
-    // localStorage.clear()
     let newdata = JSON.stringify([...todos, formdata])
     console.log(newdata)
     localStorage.setItem("todos", newdata)
@@ -104,6 +101,18 @@ export default function Todos() {
   const handleClick = (prio) => {
     formdata.priority = prio.label;
     setselectedPriority(prio.label)
+  }
+  const handleDelete = (id: any) => {
+
+    // console.log(id)
+    console.log(todos)
+    settodos(todos.filter((item => item.id !== id)))
+    console.log(todos)
+    let newdata = JSON.stringify(todos)
+    localStorage.setItem("todos", newdata)
+  }
+  const handleEdit = (task) => {
+
   }
 
   return (
@@ -140,7 +149,7 @@ export default function Todos() {
           {todos.map((todo) => {
 
             return (
-              <div className={`flex gap-2 justify-centre items-center rounded-lg ${todo.bgColor} ${todo.borderColor} h-[40px] `} key={todo.id}>
+              <div className={`flex gap-2 relative justify-centre items-center rounded-lg ${todo.bgColor} ${todo.borderColor} h-[40px] `} key={todo.id}>
 
 
                 <div className="flex h-[40px] ">
@@ -151,6 +160,8 @@ export default function Todos() {
                     {todo.todo}
                   </div>
                 </div>
+                <div className="deletetodo absolute right-12  "><PencilSparkles /></div>
+                <div onClick={() => handleDelete(todo.id)} className="deletetodo absolute right-2 "><Trash2 /></div>
               </div>
 
             )
