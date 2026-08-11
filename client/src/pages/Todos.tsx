@@ -59,7 +59,7 @@ export default function Todos() {
     { label: "low", color: "bg-green-300" }
   ]
   function generateUUID() {
-    return "xxxx-yxxx-yxxx".replace(/[xy]/g, function () {
+    return "xyxx-yxxx-yxxx".replace(/[xy]/g, function () {
       return Math.ceil(Math.random() * 9)
     })
   }
@@ -68,7 +68,7 @@ export default function Todos() {
   // console.log(todoSearch)
 
   const [formdata, setFormdata] = useState<todoDataType>({
-    id: "",
+    id: generateUUID(),
     date_time: new Date(),
     todo: "",
     priority: "medium",
@@ -83,13 +83,13 @@ export default function Todos() {
 
   }
   const handleAdd = () => {
-
+    if (formdata.todo.length == 0) return alert("Empty Todo is not allowed ")
     let newdata = JSON.stringify([...todos, formdata])
     console.log(newdata)
     localStorage.setItem("todos", newdata)
     setIsloading(!isloading)
     setFormdata({
-      id: "",
+      id: generateUUID(),
       date_time: new Date(),
       todo: "",
       priority: "medium",
