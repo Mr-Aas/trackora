@@ -20,11 +20,11 @@ export default function Header() {
                         <span className='text-sm'>Tasks</span>
                     </Link>
 
-                    <Link to='/notes' className='menu  flex flex-col items-center' >
+                    <Link to='/logs' className='menu  flex flex-col items-center' >
                         <NotebookPen />
                         <span className='text-sm'>Logs</span>
                     </Link>
-                    <Link to='/tasks' className="datetoday w-[40%]">
+                    <Link to='/' className="datetoday w-[40%]">
 
                         <div className='flex justify-center flex-col items-center'>{today()}
                             <span className='text-sm'>(today)</span>
