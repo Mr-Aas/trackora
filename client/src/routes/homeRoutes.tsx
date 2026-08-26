@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Todos from "../pages/Todos";
 import Logs from "../pages/Logs";
 import ManageTasks from "../pages/ManageTasks";
+import Settings from "../pages/settings";
 
 const HomeRoutes = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const HomeRoutes = createBrowserRouter([
             {
                 path: "/logs",
                 element: < Logs />
+            },
+            {
+                path: "/settings",
+                element: < Settings />
             },
 
         ]
