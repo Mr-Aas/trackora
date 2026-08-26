@@ -1,0 +1,65 @@
+--------web application like atracker----------
+
+-------time astimatded approx. - 1/8/2026 - 10/2026
+
+--------suggested names : 1. growthsync
+                          2. evolyzer
+                          3. growthlytics
+                          4. progressa -----loved
+                          5. trackora
+                          6. persona 
+
+tech stack -
+frontend : 1. typescript 
+           2. vite , react , 
+           3. core css along with tailwind
+           4.
+
+backend : --stashed for now until frontend develope but 
+          1. python -uv 
+          2. fastapi
+          
+database : --for intial faces of frontend use file store
+         later : 1. yet to decide  
+                 2. use redis 
+            
+deployement tools and utilities :
+              1. using linux 
+              2. through docker , 
+tools used : 
+        for lintet : esLint
+features :(mobile first app)
+
+---------key features ---------
+(basics)
+1. time counter like atracker may be not the same level but a  clock measure how much time a task were been active 
+(advance)
+2. daily , weekly , monthly and a full  year report with graphical representation 
+
+-------initial decided features --------
+
+1. there should be a dashboard inspired by atracker 
+
+2. people could add there todos - 
+                             1. daily section 
+                             2. weekly section 
+                             3. monthly
+                             4. super year goal 
+
+3. people could jounel there days daily and that journel should be attached to that date 
+
+4.the could make there notes there 
+
+5. (advance)the could design there schedule according to there need 
+
+------ai recommended stack ----------
+|Layer| Recommendation|Why                                                  |
+| ---------- | ------------------------------------ | ---------------------------------------------------- |
+| Frontend   | React + TypeScript + Vite + Tailwind | Modern, fast, and widely used                        |
+| State      | Zustand + TanStack Query             | Simple and scalable                                  |
+| Charts     | Recharts                             | Excellent for productivity dashboards                |
+| Backend    | FastAPI                              | High performance and ideal for future AI features    |
+| Database   | PostgreSQL                           | Best fit for relational productivity data            |
+| Cache      | Redis                                | Improves performance as the app grows                |
+| Storage    | Supabase Storage                     | Great for recordings and attachments                 |
+| Deployment | Vercel + Railway + Neon + Supabase   | Smooth developer experience with generous free tiers |

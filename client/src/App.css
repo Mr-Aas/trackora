@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 2px
+}
+
+/* .showTodos{
+  margin-top: 20px;
+} */
+.todolist {
+  margin-top: 20px;
+}
